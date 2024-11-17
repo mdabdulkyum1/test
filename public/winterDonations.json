@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "title": "Warm Coats for Kids",
+      "image": "https://i.ibb.co.com/RHtkszq/winter-kids.jpg",
+      "description": "Help provide warm winter coats for children in need.",
+      "status": "Ongoing",
+      "contactInfo": "contact@warmcoats.com",
+      "division": "Barishal"
+    },
+    {
+      "id": 2,
+      "title": "Blankets for Elderly",
+      "image": "https://i.ibb.co.com/pKTsxQw/Blankets.jpg",
+      "description": "Ensure the elderly stay warm with cozy blankets this winter.",
+      "status": "Ongoing",
+      "contactInfo": "support@blanketcare.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 3,
+      "title": "Winter Jackets for Families",
+      "image": "https://i.ibb.co.com/3rjJVQt/Winter-Jackets-for-Families.jpg",
+      "description": "Support families with essential winter jackets.",
+      "status": "Ongoing",
+      "contactInfo": "info@familyjacketfund.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 4,
+      "title": "Thermal Clothing Drive",
+      "image": "https://i.ibb.co.com/6sMWDHG/Thermal-Clothing-Drive.jpg",
+      "description": "Collect thermal clothing for low-income families.",
+      "status": "Ongoing",
+      "contactInfo": "contact@thermaldrive.com",
+      "division": "Dhaka"
+    },
+    {
+      "id": 5,
+      "title": "Hats and Gloves for Homeless",
+      "image": "https://i.ibb.co.com/GJ0sHXc/Hats-and-Gloves-for-Homeless.jpg",
+      "description": "Distribute hats and gloves to help the homeless stay warm.",
+      "status": "Ongoing",
+      "contactInfo": "help@homelesshats.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 6,
+      "title": "Winter Boots Donation",
+      "image": "https://i.ibb.co.com/wWrSdnc/Winter-Boots-Donation.jpg",
+      "description": "Donate winter boots to provide warmth and protection during the harsh weather.",
+      "status": "Ongoing",
+      "contactInfo": "boots@donatewarmth.org",
+      "division": "Dhaka"
+    },
+    {
+      "id": 7,
+      "title": "Scarves for Children",
+      "image": "https://i.ibb.co.com/99LqhLd/Scarves-for-Children.jpg",
+      "description": "Help keep children warm with scarves during the winter season.",
+      "status": "Ongoing",
+      "contactInfo": "contact@scarfcare.org",
+      "division": "Chittagong"
+    },
+    {
+      "id": 8,
+      "title": "Sweaters for Seniors",
+      "image": "https://i.ibb.co.com/mJhhsPH/Sweaters-for-Seniors.jpg",
+      "description": "Provide warm sweaters to elderly individuals who need them most.",
+      "status": "Ongoing",
+      "contactInfo": "support@seniorcare.org",
+      "division": "Khulna"
+    },
+    {
+      "id": 9,
+      "title": "Wool Socks for the Homeless",
+      "image": "https://i.ibb.co.com/v3ZLvjW/Wool-Socks-for-the-Homeless.jpg",
+      "description": "Donate wool socks to help the homeless stay warm during the winter.",
+      "status": "Ongoing",
+      "contactInfo": "contact@woolsocks.org",
+      "division": "Rajshahi"
+    }
+]
+
+
+
+
+
+
+
+
+
