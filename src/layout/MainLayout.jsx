@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 function MainLayout() {
   return (
-    <div>
+    <div className="font-poppins">
       <Outlet></Outlet>
     </div>
   );
