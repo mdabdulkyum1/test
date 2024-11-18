@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react"
+import { Link } from "react-router-dom"
 
 
 function DonationCampaigns() {
@@ -30,9 +31,10 @@ function DonationCampaigns() {
                         <p className="text-slate-gray mt-1 italic">{card.division}</p>
                     </div>
                     <div className="mt-auto">
-                        <button className="w-full py-2 bg-ice-blue text-black font-semibold rounded-md hover:bg-frosty-blue transition">
-                            Donate Now
-                        </button>
+
+                        <Link to={`/donation-details/${card.id}`} className="w-full py-2 inline-block text-center bg-ice-blue text-black font-semibold rounded-md hover:bg-frosty-blue transition">
+                         Donate Now
+                        </Link>
                     </div>
                 </div>
             ))}
