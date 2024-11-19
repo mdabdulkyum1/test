@@ -52,7 +52,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-ice-blue">Login</a>
+        <Link to="/login" className="btn bg-ice-blue">Login</Link>
       </div>
     </div>
   );

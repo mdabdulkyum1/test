@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import DonationCampaigns from "../pages/DonationCampaigns/DonationCampaigns";
 import PrivateRoute from "./PrivateRoute";
 import DonationDetails from "../pages/DonationDetails/DonationDetails";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 
@@ -33,7 +35,16 @@ const router = createBrowserRouter([
                     const singleDonateData = donateData.find(singleData => singleData.id === parseInt(params.id));
                     return singleDonateData;
                 }
+            },
+            {
+                path: "login",
+                element: <Login></Login>
+            },
+            {
+                path: "register",
+                element: <Register></Register>
             }
+
         ]
     }
 ])
