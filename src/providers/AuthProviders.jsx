@@ -19,7 +19,7 @@ function AuthProviders({ children }) {
       return createUserWithEmailAndPassword(auth, email, password);
     }
     const handelLogin = (email, password) => {
-        return signInWithEmailAndPassword(email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
     const handelLogOut = () => {
         return signOut(auth);
