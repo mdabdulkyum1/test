@@ -15,7 +15,9 @@ function Navbar() {
       }
       <li><NavLink to="/campaigns">Donation Campaigns</NavLink></li>
       <li><NavLink to="/help">How to Help</NavLink></li>
-      <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+      {
+        user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+      }
     </>
   );
 
