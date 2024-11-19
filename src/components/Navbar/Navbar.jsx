@@ -5,7 +5,7 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 function Navbar() {
 
-  const { user, handelLogOut } = useContext(AuthContext);
+  const { user, handelLogOut, loading } = useContext(AuthContext);
 
   const links = (
     <>
@@ -62,6 +62,8 @@ function Navbar() {
       </div>
       <div className="navbar-end">
 
+       
+
         {
           user ? <div className="flex items-center gap-2">
             <div className="">
@@ -69,7 +71,10 @@ function Navbar() {
             </div>
             <Link to="/login" onClick={handelLogOut} className="btn bg-ice-blue">Log Out</Link>
           </div> : 
-
+          loading ? <div className="flex items-center justify-center mb-4">
+          <div className="skeleton h-10 w-10"></div>
+          <div className="skeleton btn w-20"></div>
+        </div> :
         <Link to="/login" className="btn bg-ice-blue">Login</Link>
         }
 
