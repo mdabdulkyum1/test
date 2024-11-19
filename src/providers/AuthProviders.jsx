@@ -10,18 +10,22 @@ const GoogleProvider = new GoogleAuthProvider();
 
 function AuthProviders({ children }) {
     const [user, setUser] = useState(null);
-    console.log(user)
+    const [loading, setLoading] = useState(true);
 
     const handelLoginWithGoogle = () => {
+        setLoading(true);
         return signInWithPopup(auth,GoogleProvider);
     }
     const handelRegister = (email, password) => {
+        setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
     }
     const handelLogin = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
     const handelLogOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -33,6 +37,7 @@ function AuthProviders({ children }) {
             }else{
                 setUser(null);
             }
+            setLoading(false);
         });
         return () => {
             unsubscribe();
@@ -43,6 +48,7 @@ function AuthProviders({ children }) {
 
     const authInfo = {
        user,
+       loading,
        handelLoginWithGoogle,
        handelRegister,
        handelLogin,

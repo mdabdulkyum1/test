@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
@@ -9,6 +9,7 @@ function Login() {
 
   const [err, setErr] = useState("");
 
+  const location = useLocation();
 
   const navigate = useNavigate();
   const { handelLoginWithGoogle, handelLogin, handelLogOut} = useContext(AuthContext);
@@ -16,7 +17,7 @@ function Login() {
     handelLoginWithGoogle()
     .then(result=> {
       if(result.user){
-        navigate('/')
+        navigate(location?.state ? location.state : "/");
       }
     }).catch(error => {
         alert(error.massage)
@@ -51,7 +52,8 @@ function Login() {
     .then((result) => {
       if(result.user){
           notify();
-          navigate('/');
+
+          navigate(location?.state ? location.state : "/");
       }
     })
     .catch((error) => {
