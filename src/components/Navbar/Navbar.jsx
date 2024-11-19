@@ -1,11 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import winterLogo from '../../assets/winterLogo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
 
 function Navbar() {
+
+  const { user, handelLogOut } = useContext(AuthContext);
+
   const links = (
     <>
       <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/profile">Profile</NavLink></li>
+      {
+        user && <li><NavLink to="/profile">Profile</NavLink></li>
+      }
       <li><NavLink to="/campaigns">Donation Campaigns</NavLink></li>
       <li><NavLink to="/help">How to Help</NavLink></li>
       <li><NavLink to="/dashboard">Dashboard</NavLink></li>
@@ -52,7 +59,20 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
+
+        {
+          user ? <div className="flex items-center gap-2">
+            <div className="">
+              <img src={user?.photoURL} alt={user?.displayName} title={user?.displayName} className="rounded-full w-10"/>
+            </div>
+            <Link to="/login" onClick={handelLogOut} className="btn bg-ice-blue">Log Out</Link>
+          </div> : 
+
         <Link to="/login" className="btn bg-ice-blue">Login</Link>
+        }
+
+        
+        
       </div>
     </div>
   );
