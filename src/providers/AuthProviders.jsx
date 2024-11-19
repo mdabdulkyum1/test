@@ -10,7 +10,7 @@ const GoogleProvider = new GoogleAuthProvider();
 
 function AuthProviders({ children }) {
     const [user, setUser] = useState(null);
-    
+    console.log(user)
 
     const handelLoginWithGoogle = () => {
         return signInWithPopup(auth,GoogleProvider);
