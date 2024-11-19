@@ -13,8 +13,9 @@ function Register() {
   const handelGoogleLogin = () => {
     handelLoginWithGoogle()
     .then(result=> {
-      navigate('/')
-      console.log(result.user)
+      if(result.user){
+        navigate('/')
+      }
     }).catch(error => {
         alert(error.massage)
     })
