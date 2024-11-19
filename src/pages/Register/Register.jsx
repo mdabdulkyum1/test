@@ -1,8 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 function Register() {
+  
+
+
+  const navigate = useNavigate();
+  const { handelLoginWithGoogle, } = useContext(AuthContext);
+  const handelGoogleLogin = () => {
+    handelLoginWithGoogle()
+    .then(result=> {
+      navigate('/')
+      console.log(result.user)
+    }).catch(error => {
+        alert(error.massage)
+    })
+  }
+
   return (
     <div className="w-10/12 mx-auto py-12">
       <h1 className="text-center text-heading text-3xl font-bold my-6">
@@ -72,7 +89,7 @@ function Register() {
         <div className="lg:w-1/2">
           <h1 className="text-2xl font-bold mb-4">Continue With</h1>
           <div className="">
-            <button className="btn outline outline-ice-blue" type="submit">
+            <button onClick={handelGoogleLogin} className="btn outline outline-ice-blue" type="submit">
               <FcGoogle />
               Continue with Google
             </button>
