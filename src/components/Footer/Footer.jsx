@@ -71,6 +71,11 @@ function Footer() {
           </div>
         </nav>
       </div>
+      <div className="text-gray-400 text-center py-4">
+        <p className="text-sm md:text-base border-t pt-4">
+          &copy; {new Date().getFullYear()} Winter Clothing Donation. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
