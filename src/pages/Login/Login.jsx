@@ -3,13 +3,19 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
+import { IoIosEyeOff } from "react-icons/io";
 
 
 function Login() {
 
   const [err, setErr] = useState("");
-
+  const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
+
+  const handelShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const navigate = useNavigate();
   const { handelLoginWithGoogle, handelLogin, handelLogOut} = useContext(AuthContext);
@@ -88,13 +94,25 @@ function Login() {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
+
+              <label className="input input-bordered flex items-center gap-2">
+                <input
+                  type={`${showPassword ? "text" : "password"}`}
+                  placeholder="password"
+                  name="password"
+                  className="grow"
+                  required
+                />
+
+                <span onClick={handelShowPassword}>
+                  {showPassword ? (
+                    <FaEye className="cursor-pointer" />
+                  ) : (
+                    <IoIosEyeOff className="cursor-pointer" />
+                  )}
+                </span>
+              </label>
+
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
