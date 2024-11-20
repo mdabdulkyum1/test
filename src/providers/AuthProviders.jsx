@@ -34,7 +34,6 @@ function AuthProviders({ children }) {
         return updateProfile(auth.currentUser, {displayName:name, photoURL:photo})
     }
     const handelLogOut = () => {
-        setLoading(true);
         return signOut(auth);
     }
 
