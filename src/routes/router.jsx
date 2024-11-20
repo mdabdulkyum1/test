@@ -10,6 +10,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import ProfileInfo from "../components/shared/ProfileInfo/ProfileInfo";
 import UpdateProfileInfo from "../components/shared/UpdateProfileInfo/UpdateProfileInfo";
 import ForgetPassword from "../components/shared/ForgetPassword/ForgetPassword";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
             }
 
         ]
+    },
+    {
+        path: "*",
+        element: <ErrorPage></ErrorPage>
     }
 ])
 
