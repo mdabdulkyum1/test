@@ -9,6 +9,7 @@ import Register from "../pages/Register/Register";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ProfileInfo from "../components/shared/ProfileInfo/ProfileInfo";
 import UpdateProfileInfo from "../components/shared/UpdateProfileInfo/UpdateProfileInfo";
+import ForgetPassword from "../components/shared/ForgetPassword/ForgetPassword";
 
 
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register></Register>
+            },
+            {
+                path: "forget-password",
+                element: <ForgetPassword></ForgetPassword>
             },
             {
                 path: "dashboard",

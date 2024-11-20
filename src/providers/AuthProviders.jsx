@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import { createContext, useEffect, useState } from "react"
+import { createContext, useEffect, useRef, useState } from "react"
 import { auth } from './../firebase/firebase.init';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 
@@ -10,7 +10,11 @@ const GoogleProvider = new GoogleAuthProvider();
 
 function AuthProviders({ children }) {
     const [user, setUser] = useState(null);
+    console.log(user)
     const [loading, setLoading] = useState(true);
+
+    const emailRef = useRef();
+
 
     const handelLoginWithGoogle = () => {
         setLoading(true);
@@ -21,8 +25,10 @@ function AuthProviders({ children }) {
       return createUserWithEmailAndPassword(auth, email, password);
     }
     const handelLogin = (email, password) => {
-        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    }
+    const handelResetPasswordWithEmail = (email) =>{
+        return sendPasswordResetEmail(auth, email)
     }
     const updateProfileInfo = (name,photo) => {
         return updateProfile(auth.currentUser, {displayName:name, photoURL:photo})
@@ -52,11 +58,13 @@ function AuthProviders({ children }) {
     const authInfo = {
        user,
        loading,
+       emailRef,
        handelLoginWithGoogle,
        handelRegister,
        handelLogin,
        handelLogOut,
-       updateProfileInfo
+       updateProfileInfo,
+       handelResetPasswordWithEmail
     }
 
   return (

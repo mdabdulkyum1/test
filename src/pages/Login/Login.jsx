@@ -18,7 +18,7 @@ function Login() {
   };
 
   const navigate = useNavigate();
-  const { handelLoginWithGoogle, handelLogin, handelLogOut} = useContext(AuthContext);
+  const { handelLoginWithGoogle, handelLogin, handelLogOut, emailRef} = useContext(AuthContext);
   const handelGoogleLogin = () => {
     handelLoginWithGoogle()
     .then(result=> {
@@ -51,8 +51,6 @@ function Login() {
  
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password)
-
 
     handelLogin(email, password)
     .then((result) => {
@@ -67,7 +65,6 @@ function Login() {
     });
   
   }
-
   
   return (
     <div className="w-10/12 mx-auto py-12">
@@ -85,6 +82,7 @@ function Login() {
               <input
                 type="email"
                 name="email"
+                ref={emailRef}
                 placeholder="email"
                 className="input input-bordered"
                 required
@@ -114,9 +112,9 @@ function Login() {
               </label>
 
               <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
+                <Link to="/forget-password" onChange={()=> {}} className="label-text-alt link link-hover">
                   Forgot password?
-                </a>
+                </Link>
               </label>
             </div>
             {

@@ -18,7 +18,7 @@ function Register() {
   };
 
   const navigate = useNavigate();
-  const { handelLoginWithGoogle, handelRegister } = useContext(AuthContext);
+  const { handelLoginWithGoogle, handelRegister, } = useContext(AuthContext);
   const handelGoogleLogin = () => {
     handelLoginWithGoogle()
       .then((result) => {
@@ -53,6 +53,7 @@ function Register() {
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
+
 
     if (!/[A-Z]/.test(password)) {
       setErr("Password must have an Uppercase letter!");
