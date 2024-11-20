@@ -11,6 +11,7 @@ import ProfileInfo from "../components/shared/ProfileInfo/ProfileInfo";
 import UpdateProfileInfo from "../components/shared/UpdateProfileInfo/UpdateProfileInfo";
 import ForgetPassword from "../components/shared/ForgetPassword/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import HowToHelp from "../pages/HowToHelp/HowToHelp";
 
 
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: "forget-password",
                 element: <ForgetPassword></ForgetPassword>
+            },
+            {
+                path: "help",
+                element: <HowToHelp></HowToHelp>
             },
             {
                 path: "dashboard",
