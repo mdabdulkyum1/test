@@ -6,6 +6,9 @@ import PrivateRoute from "./PrivateRoute";
 import DonationDetails from "../pages/DonationDetails/DonationDetails";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import ProfileInfo from "../components/shared/ProfileInfo/ProfileInfo";
+import UpdateProfileInfo from "../components/shared/UpdateProfileInfo/UpdateProfileInfo";
 
 
 
@@ -43,6 +46,20 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register></Register>
+            },
+            {
+                path: "dashboard",
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute> ,
+                children: [
+                    {
+                        path: "/dashboard",
+                        element: <ProfileInfo></ProfileInfo>
+                    },
+                    {
+                        path: "update-profile",
+                        element: <UpdateProfileInfo></UpdateProfileInfo>
+                    }
+                ]
             }
 
         ]

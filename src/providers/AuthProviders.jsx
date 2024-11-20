@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react"
 import { auth } from './../firebase/firebase.init';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
 export const AuthContext = createContext(null);
 
@@ -23,6 +23,9 @@ function AuthProviders({ children }) {
     const handelLogin = (email, password) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
+    }
+    const updateProfileInfo = (name,photo) => {
+        return updateProfile(auth.currentUser, {displayName:name, photoURL:photo})
     }
     const handelLogOut = () => {
         setLoading(true);
@@ -53,6 +56,7 @@ function AuthProviders({ children }) {
        handelRegister,
        handelLogin,
        handelLogOut,
+       updateProfileInfo
     }
 
   return (
