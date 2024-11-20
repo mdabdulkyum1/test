@@ -18,6 +18,7 @@ function Navbar() {
       {
         user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
       }
+      <li><NavLink to="/contact">Contact Us</NavLink></li>
     </>
   );
 

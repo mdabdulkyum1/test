@@ -48,7 +48,7 @@ function DonationDetails() {
           <h2 className="text-2xl text-heading font-semibold mb-4">
             Donation Form
           </h2>
-          {/* <form onSubmit={notify}>
+          <form onSubmit={notify} className="space-y-6">
             <div className="mb-4">
               <label
                 htmlFor="quantity"
@@ -64,6 +64,7 @@ function DonationDetails() {
                 placeholder="e.g., 2 jackets, 3 blankets"
               />
             </div>
+
             <div className="mb-4">
               <label
                 htmlFor="itemType"
@@ -79,17 +80,7 @@ function DonationDetails() {
                 placeholder="e.g., blanket, jacket, sweater"
               />
             </div>
-            <div className="form-control">
-              <label className="label cursor-pointer justify-start gap-4">
-                <span className="text-3xl">Blanket</span>
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-primary"
-                />
-              </label>
-               <label htmlFor="">Quantity of items</label>
-              <input type="number" />
-            </div>
+
             <div className="mb-4">
               <label
                 htmlFor="pickupLocation"
@@ -105,6 +96,7 @@ function DonationDetails() {
                 placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka"
               />
             </div>
+
             <div className="mb-4">
               <label
                 htmlFor="notes"
@@ -118,105 +110,14 @@ function DonationDetails() {
                 placeholder="Any additional information"
               ></textarea>
             </div>
+
             <button
               type="submit"
               className="w-full py-2 bg-ice-blue text-black font-semibold rounded-md hover:bg-frosty-blue transition"
             >
               Submit Donation
             </button>
-          </form> */}
-          <form onSubmit={notify} className="space-y-6">
-  <div className="mb-4">
-    <label
-      htmlFor="quantity"
-      className="block text-primary-text font-medium mb-2"
-    >
-      Quantity of items
-    </label>
-    <input
-      type="text"
-      required
-      id="quantity"
-      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-navyblue"
-      placeholder="e.g., 2 jackets, 3 blankets"
-    />
-  </div>
-
-  <div className="mb-4">
-    <label
-      htmlFor="itemType"
-      className="block text-primary-text font-medium mb-2"
-    >
-      Item type
-    </label>
-    <input
-      type="text"
-      required
-      id="itemType"
-      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-navyblue"
-      placeholder="e.g., blanket, jacket, sweater"
-    />
-  </div>
-
-  {/* Blanket Item Form Section */}
-  <div className="form-control mb-4 p-4 border border-gray-200 rounded-lg">
-    <label className="label cursor-pointer justify-start gap-4 mb-2">
-      <span className="text-xl font-semibold">Blanket</span>
-      <input
-        type="checkbox"
-        className="checkbox checkbox-primary"
-      />
-    </label>
-    <label htmlFor="blanketQuantity" className="block text-sm font-medium mb-1">
-      Quantity of blankets
-    </label>
-    <input
-      type="number"
-      id="blanketQuantity"
-      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-navyblue"
-      placeholder="Enter quantity"
-      min="0"
-    />
-  </div>
-
-  <div className="mb-4">
-    <label
-      htmlFor="pickupLocation"
-      className="block text-primary-text font-medium mb-2"
-    >
-      Pickup location
-    </label>
-    <input
-      type="text"
-      required
-      id="pickupLocation"
-      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-navyblue"
-      placeholder="e.g., House 12, Road 5, Dhanmondi, Dhaka"
-    />
-  </div>
-
-  <div className="mb-4">
-    <label
-      htmlFor="notes"
-      className="block text-primary-text font-medium mb-2"
-    >
-      Additional notes (optional)
-    </label>
-    <textarea
-      id="notes"
-      className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:border-navyblue"
-      placeholder="Any additional information"
-    ></textarea>
-  </div>
-
-  <button
-    type="submit"
-    className="w-full py-2 bg-ice-blue text-black font-semibold rounded-md hover:bg-frosty-blue transition"
-  >
-    Submit Donation
-  </button>
-</form>
-
+          </form>
         </div>
 
         <div className="mt-6">
