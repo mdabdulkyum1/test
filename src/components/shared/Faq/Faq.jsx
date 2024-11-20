@@ -1,4 +1,11 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({});
+AOS.refresh();
+
+
 import faq from '../../../assets/faq.jpg'
+import { Link } from 'react-router-dom';
 
 function Faq() {
   return (
@@ -54,16 +61,17 @@ function Faq() {
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full lg:w-1/2">
+      
+        <div className="w-full lg:w-1/2" data-aos="fade-left" data-aos-easing="linear"
+     data-aos-duration="1500">
           <img src={faq} alt="Faq" className="w-full h-auto rounded-md" />
         </div>
       </div>
 
       <div className="mt-6 text-center">
-        <button className="btn bg-ice-blue font-semibold rounded-md hover:bg-frosty-blue transition py-2 px-6">
+        <Link to="/campaigns" className="btn bg-ice-blue font-semibold rounded-md hover:bg-frosty-blue transition py-2 px-6">
           Donate Now
-        </button>
+        </Link>
       </div>
     </section>
   );
