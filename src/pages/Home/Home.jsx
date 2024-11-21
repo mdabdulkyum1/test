@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
     <Helmet>
-      <title>Home | Winter Clothing Donation</title>
+      <title>Home | Winter Care</title>
     </Helmet>
     <Banner></Banner>
     <About></About>

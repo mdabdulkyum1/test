@@ -23,7 +23,7 @@ function DonationDetails() {
   return (
     <>
     <Helmet>
-        <title>{title} | Winter Clothing Donation</title>
+        <title>{title} | Winter Care</title>
     </Helmet>
     <section className="bg-ice-blue py-12">
       <div className="w-10/12 mx-auto">

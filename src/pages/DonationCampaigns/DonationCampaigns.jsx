@@ -17,7 +17,7 @@ function DonationCampaigns() {
     <>
     
     <Helmet>
-        <title>Campaigns | Winter Clothing Donation</title>
+        <title>Campaigns | Winter Care</title>
     </Helmet>
     
     <section className="bg-frost-green py-12">

@@ -12,7 +12,7 @@ function Dashboard() {
   return (
     <>
     <Helmet>
-        <title>Dashboard | Winter Clothing Donation</title>
+        <title>Dashboard | Winter Care</title>
     </Helmet>
     <div className="">
         <div className="w-5/6 mx-auto">

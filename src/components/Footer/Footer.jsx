@@ -6,12 +6,16 @@ function Footer() {
     <footer className=" bg-primary-bg text-base-content p-10">
       <div className="footer grid-cols-1 lg:grid-cols-3 w-5/6 mx-auto">
         <aside>
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
             <img
+              title="Winter Care"
               src={winterLogo}
-              alt="Winter Clothing Donation"
+              alt="Winter Care"
               className="w-16"
             />
+            <div className="">
+          <h1 className="text-xl font-semibold">Winter Care</h1>
+        </div>
           </div>
           <div className="mt-6 space-y-2">
             <p>Barishal,Amtali, Barguna</p>

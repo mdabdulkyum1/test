@@ -5,7 +5,7 @@ function Contact() {
   return (
     <>
     <Helmet>
-      <title>Contact | Winter Clothing Donation</title>
+      <title>Contact | Winter Care</title>
     </Helmet>
     <div className="bg-primary-bg text-primary-text font-poppins min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-lg bg-snowy-white p-8 rounded-lg shadow-lg">

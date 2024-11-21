@@ -56,17 +56,21 @@ function Navbar() {
             {links}
           </ul>
         </div>
+        
         <Link
           to="/"
           className="btn btn-ghost text-xl text-heading"
-          title="Winter Clothing Donation"
+          title="Winter Care"
         >
           <img
             src={winterLogo}
-            alt="Winter Clothing Donation"
-            className="w-12 rounded-full"
+            alt="Winter Care"
+            className="w-12 h-12 rounded-full"
           />
         </Link>
+        <div className="hidden md:block">
+          <h1 className="text-xl font-semibold">Winter Care</h1>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -79,7 +83,7 @@ function Navbar() {
                 src={user?.photoURL}
                 alt={user?.displayName}
                 title={user?.displayName}
-                className="rounded-full w-10 h-10"
+                className="rounded-full w-10 h-10 object-cover border border-red-500"
               />
             </div>
             <Link
@@ -92,7 +96,7 @@ function Navbar() {
           </div>
         ) : loading ? (
           <div className="flex items-center justify-center mb-4">
-            <div className="skeleton h-10 w-10"></div>
+            <div className="skeleton h-16 w-16 shrink-0 rounded-full"></div>
             <div className="skeleton btn w-20"></div>
           </div>
         ) : (
