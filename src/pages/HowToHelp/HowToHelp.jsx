@@ -1,7 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import HowYouCanHelp from "../../components/shared/HowYouCanHelp/HowYouCanHelp";
 
 function HowToHelp() {
     return (
+      <>
+      <Helmet>
+         <title>Help | Winter Clothing Donation</title>
+      </Helmet>
       <div className="bg-primary-bg text-primary-text font-poppins p-6 md:p-12">
         <div className="my-12">
            <HowYouCanHelp></HowYouCanHelp>
@@ -34,6 +39,7 @@ function HowToHelp() {
           </div>
         </div>
       </div>
+      </>
     );
   }
   

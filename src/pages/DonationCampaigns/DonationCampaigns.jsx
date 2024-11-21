@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react"
+import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 
 
@@ -13,6 +14,12 @@ function DonationCampaigns() {
     } ,[])
 
   return (
+    <>
+    
+    <Helmet>
+        <title>Campaigns | Winter Clothing Donation</title>
+    </Helmet>
+    
     <section className="bg-frost-green py-12">
     <div className="w-5/6 mx-auto">
         <div className="my-4 mb-9">
@@ -40,7 +47,8 @@ function DonationCampaigns() {
             ))}
         </div>
     </div>
-</section>
+    </section>
+    </>
 
   )
 }

@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../../providers/AuthProviders"
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 function Dashboard() {
@@ -9,6 +10,10 @@ function Dashboard() {
 
  
   return (
+    <>
+    <Helmet>
+        <title>Dashboard | Winter Clothing Donation</title>
+    </Helmet>
     <div className="">
         <div className="w-5/6 mx-auto">
            <div className="h-24">
@@ -35,6 +40,7 @@ function Dashboard() {
         </section>
         </div>
     </div>
+    </>
   )
 }
 

@@ -11,11 +11,6 @@ function Navbar() {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      {user && (
-        <li>
-          <NavLink to="/profile">Profile</NavLink>
-        </li>
-      )}
       <li>
         <NavLink to="/campaigns">Donation Campaigns</NavLink>
       </li>

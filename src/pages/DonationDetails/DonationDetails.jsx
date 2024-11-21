@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { IoReturnUpBack } from "react-icons/io5";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 function DonationDetails() {
   const singleData = useLoaderData();
@@ -20,6 +21,10 @@ function DonationDetails() {
   };
 
   return (
+    <>
+    <Helmet>
+        <title>{title} | Winter Clothing Donation</title>
+    </Helmet>
     <section className="bg-ice-blue py-12">
       <div className="w-10/12 mx-auto">
         <div className="mb-8">
@@ -129,6 +134,7 @@ function DonationDetails() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

@@ -1,7 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 function Contact() {
   return (
+    <>
+    <Helmet>
+      <title>Contact | Winter Clothing Donation</title>
+    </Helmet>
     <div className="bg-primary-bg text-primary-text font-poppins min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-lg bg-snowy-white p-8 rounded-lg shadow-lg">
         <h2 className="text-heading text-2xl font-bold mb-6 text-center">
@@ -53,6 +58,7 @@ function Contact() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 
