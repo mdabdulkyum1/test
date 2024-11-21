@@ -7,7 +7,7 @@ function HowToHelp() {
            <HowYouCanHelp></HowYouCanHelp>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid  gap-6 md:grid-cols-3">
 
           <div className="bg-snowy-white shadow-md p-6 rounded-lg hover:shadow-lg transition">
             <h2 className="text-xl font-semibold text-heading mb-4">Donate</h2>

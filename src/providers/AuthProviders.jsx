@@ -10,7 +10,6 @@ const GoogleProvider = new GoogleAuthProvider();
 
 function AuthProviders({ children }) {
     const [user, setUser] = useState(null);
-    console.log(user)
     const [loading, setLoading] = useState(true);
 
     const emailRef = useRef();
@@ -32,6 +31,17 @@ function AuthProviders({ children }) {
     }
     const updateProfileInfo = (name,photo) => {
         return updateProfile(auth.currentUser, {displayName:name, photoURL:photo})
+        .then(() => {
+            setUser((prevUser) => ({
+                ...prevUser,
+                displayName: name,
+                photoURL: photo,
+            }));
+        })
+        .catch((error) => {
+            console.error("Profile Update Error: ", error.message);
+            throw error;
+        });
     }
     const handelLogOut = () => {
         return signOut(auth);

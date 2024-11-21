@@ -1,24 +1,35 @@
 import { Link, NavLink } from "react-router-dom";
-import winterLogo from '../../assets/winterLogo.png'
+import winterLogo from "../../assets/winterLogo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 
 function Navbar() {
-
   const { user, handelLogOut, loading } = useContext(AuthContext);
 
   const links = (
     <>
-      <li><NavLink to="/">Home</NavLink></li>
-      {
-        user && <li><NavLink to="/profile">Profile</NavLink></li>
-      }
-      <li><NavLink to="/campaigns">Donation Campaigns</NavLink></li>
-      <li><NavLink to="/help">How to Help</NavLink></li>
-      {
-        user && <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-      }
-      <li><NavLink to="/contact">Contact Us</NavLink></li>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      {user && (
+        <li>
+          <NavLink to="/profile">Profile</NavLink>
+        </li>
+      )}
+      <li>
+        <NavLink to="/campaigns">Donation Campaigns</NavLink>
+      </li>
+      <li>
+        <NavLink to="/help">How to Help</NavLink>
+      </li>
+      {user && (
+        <li>
+          <NavLink to="/dashboard">Dashboard</NavLink>
+        </li>
+      )}
+      <li>
+        <NavLink to="/contact">Contact Us</NavLink>
+      </li>
     </>
   );
 
@@ -49,38 +60,50 @@ function Navbar() {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl text-heading" title="Winter Clothing Donation">
-            <img src={winterLogo} alt="Winter Clothing Donation" className="w-12 rounded-full"/>
+        <Link
+          to="/"
+          className="btn btn-ghost text-xl text-heading"
+          title="Winter Clothing Donation"
+        >
+          <img
+            src={winterLogo}
+            alt="Winter Clothing Donation"
+            className="w-12 rounded-full"
+          />
         </Link>
-   
-
-
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-            {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-
-       
-
-        {
-          user ? <div className="flex items-center gap-2">
+        {user ? (
+          <div className="flex items-center gap-2">
             <div className="">
-              <img src={user?.photoURL} alt={user?.displayName} title={user?.displayName} className="rounded-full w-10"/>
+              <img
+                src={user?.photoURL}
+                alt={user?.displayName}
+                title={user?.displayName}
+                className="rounded-full w-10 h-10"
+              />
             </div>
-            <Link to="/login" onClick={handelLogOut} className="btn bg-ice-blue">Log Out</Link>
-          </div> : 
-          loading ? <div className="flex items-center justify-center mb-4">
-          <div className="skeleton h-10 w-10"></div>
-          <div className="skeleton btn w-20"></div>
-        </div> :
-        <Link to="/login" className="btn bg-ice-blue">Login</Link>
-        }
-
-        
-        
+            <Link
+              to="/login"
+              onClick={handelLogOut}
+              className="btn bg-ice-blue"
+            >
+              Log Out
+            </Link>
+          </div>
+        ) : loading ? (
+          <div className="flex items-center justify-center mb-4">
+            <div className="skeleton h-10 w-10"></div>
+            <div className="skeleton btn w-20"></div>
+          </div>
+        ) : (
+          <Link to="/login" className="btn bg-ice-blue">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

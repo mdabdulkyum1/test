@@ -17,7 +17,7 @@ function Dashboard() {
         
         <section className="">
             <div className="flex gap-6">
-                <img src={user?.photoURL} alt={user?.displayName} className="rounded-full w-10" />
+                <img src={user?.photoURL} alt={user?.displayName} className="rounded-full w-10 h-10" />
                 <h1 className="font-semibold text-xl">Welcome, {user?.displayName}</h1>
                 <Link className="btn bg-frosty-blue" to="/dashboard/update-profile">Update Profile</Link>
             </div>

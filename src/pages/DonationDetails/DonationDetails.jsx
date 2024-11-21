@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 
 function DonationDetails() {
   const singleData = useLoaderData();
-  console.log(singleData);
   const { title, image, description, contactInfo, division, status } =
     singleData;
 
