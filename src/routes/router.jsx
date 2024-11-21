@@ -12,6 +12,7 @@ import UpdateProfileInfo from "../components/shared/UpdateProfileInfo/UpdateProf
 import ForgetPassword from "../components/shared/ForgetPassword/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import HowToHelp from "../pages/HowToHelp/HowToHelp";
+import Contact from "../pages/Contact/Contact";
 
 
 
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
                         element: <UpdateProfileInfo></UpdateProfileInfo>
                     }
                 ]
+            },
+            {
+                path: "contact",
+                element: <Contact></Contact>
             }
 
         ]
