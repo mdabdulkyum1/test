@@ -2,8 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
-import { updateProfile } from "firebase/auth";
-import { auth } from "../../firebase/firebase.init";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
 import { IoIosEyeOff } from "react-icons/io";
@@ -18,7 +16,7 @@ function Register() {
   };
 
   const navigate = useNavigate();
-  const { handelLoginWithGoogle, handelRegister, } = useContext(AuthContext);
+  const { handelLoginWithGoogle, handelRegister, updateProfileInfo} = useContext(AuthContext);
   const handelGoogleLogin = () => {
     handelLoginWithGoogle()
       .then((result) => {
@@ -70,10 +68,7 @@ function Register() {
           notify();
           navigate("/");
         }
-        updateProfile(auth.currentUser, {
-          displayName: name,
-          photoURL: photo,
-        }).then(() => {});
+        updateProfileInfo(name,photo).then(() => {});
       })
       .catch((error) => {
         const errorMessage = error.message;

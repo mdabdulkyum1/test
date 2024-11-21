@@ -39,11 +39,11 @@ function AuthProviders({ children }) {
             }));
         })
         .catch((error) => {
-            console.error("Profile Update Error: ", error.message);
             throw error;
         });
     }
     const handelLogOut = () => {
+        setUser(null);
         return signOut(auth);
     }
 
@@ -52,10 +52,11 @@ function AuthProviders({ children }) {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if(currentUser){
                 setUser(currentUser);
+                setLoading(false);
             }else{
                 setUser(null);
+                setLoading(false)
             }
-            setLoading(false);
         });
         return () => {
             unsubscribe();
