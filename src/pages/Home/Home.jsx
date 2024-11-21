@@ -5,7 +5,11 @@ import Faq from "../../components/shared/Faq/Faq"
 import HowItWorks from "../../components/shared/HowItWorks/HowItWorks"
 import HowYouCanHelp from "../../components/shared/HowYouCanHelp/HowYouCanHelp"
 
+
+
+
 function Home() {
+  
   return (
     <>
     <Helmet>

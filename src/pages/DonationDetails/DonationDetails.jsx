@@ -127,7 +127,7 @@ function DonationDetails() {
         <div className="mt-6">
           <Link
             to="/campaigns"
-            className="btn flex gap-3 w-1/2 bg-frosty-blue hover:bg-frost-green"
+            className="btn flex gap-3 lg:w-1/2 bg-frosty-blue hover:bg-frost-green"
           >
             <IoReturnUpBack /> Back to Donation Campaigns
           </Link>

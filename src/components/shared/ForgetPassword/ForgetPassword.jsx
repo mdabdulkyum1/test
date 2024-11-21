@@ -36,7 +36,7 @@ function ForgetPassword() {
   return (
     <div className="my-6">
       <h1 className="text-xl font-bold my-4 text-center">Forget Password</h1>
-      <div className="w-1/3 mx-auto">
+      <div className="w-4/5 lg:w-1/3 mx-auto">
         <form onSubmit={handelReset}>
           <div className="form-control">
             <label className="label">

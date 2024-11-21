@@ -1,8 +1,4 @@
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init({});
-AOS.refresh();
 
 import community from '../../../assets/community.jpeg'
 import { Link } from 'react-router-dom';
@@ -15,7 +11,7 @@ const About = () => {
           <p className="text-lg text-primary-text mt-2">Learn more about our mission and how you can make a difference.</p>
       </div>
       <div className="w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="lg:pr-6" data-aos="fade-right">
+          <div className="lg:pr-6" data-aos="fade-up" data-aos-delay="100">
               <h2 className="text-2xl text-heading font-semibold mb-3">Our Mission</h2>
               <p className="text-primary-text mb-4">
                   At <strong>Winter Clothing Donation</strong>, our mission is to ensure warmth and comfort for everyone during the harsh winter months. We strive to collect gently used or new winter clothing and distribute it to individuals and families in need. Our goal is to unite communities through acts of kindness and compassion, making sure that nobody is left vulnerable to the cold.
@@ -26,7 +22,7 @@ const About = () => {
               </p>
               <Link to="/campaigns" className="mt-6 btn bg-ice-blue font-semibold rounded-md hover:bg-frosty-blue transition">Donate Now</Link>
           </div>
-          <div className="flex justify-center lg:justify-end" data-aos="fade-left">
+          <div className="flex justify-center lg:justify-end">
               <img 
                   src={community}
                   alt="Community donating winter clothes" 

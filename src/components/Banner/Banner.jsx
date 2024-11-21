@@ -18,14 +18,21 @@ import {
   Autoplay,
 } from "swiper/modules";
 
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from "react-router-dom";
-AOS.init({
-  
-});
-AOS.refresh();
+
 function Banner() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      offset: 100,
+      easing: 'ease-in-out',
+      once: false,
+      disable: 'mobile', 
+    });
+  }, []);
   return (
     <div className="py-16">
       <Swiper
@@ -45,12 +52,12 @@ function Banner() {
       >
         <SwiperSlide>
           <section className="">
-            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto">
-              <div className="" data-aos="fade-up" >
-                <h1 className="text-4xl font-extrabold text-heading">
+            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto gap-6">
+              <div className="" data-aos="fade-up" data-aos-delay="100">
+                <h1 className="text-xl lg:text-4xl font-extrabold text-heading">
                   Winter Clothing Donation
                 </h1>
-                <p className="text-primary-text my-3 lg:w-1/2">
+                <p className="text-sm lg:text-lg text-primary-text my-3 lg:w-1/2">
                   Help us provide warmth to those in need this winter. Donate
                   your gently used or new winter clothing such as coats,
                   scarves, gloves, and boots. Your contribution can make a huge
@@ -61,7 +68,7 @@ function Banner() {
                   Donate Now
                 </Link>
               </div>
-              <div className="w-4/5" data-aos="fade-right">
+              <div className="w-4/5" >
                 <img src={donate1} alt="" />
               </div>
             </div>
@@ -70,12 +77,12 @@ function Banner() {
 
         <SwiperSlide>
           <section className="">
-            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto">
-              <div className="" data-aos="fade-right">
-                <h1 className="text-4xl font-extrabold text-heading">
+            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto gap-6">
+              <div className="" >
+                <h1 className="text-xl lg:text-4xl font-extrabold text-heading">
                   Help Keep Someone Warm This Winter
                 </h1>
-                <p className="text-primary-text my-3 lg:w-1/2">
+                <p className="text-sm lg:text-lg text-primary-text my-3 lg:w-1/2">
                   Together, we can make sure no one has to endure the cold
                   without proper clothing. Donate today and help us spread
                   warmth to those in need.
@@ -93,12 +100,12 @@ function Banner() {
 
         <SwiperSlide>
           <section className="">
-            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto">
-              <div className="" data-aos="fade-right">
-                <h1 className="text-4xl font-extrabold text-heading">
+            <div className="flex flex-col lg:flex-row items-center w-5/6 mx-auto gap-6 gap-6">
+              <div className="" >
+                <h1 className="text-xl lg:text-4xl font-extrabold text-heading">
                   Join Our Winter Clothing Drive
                 </h1>
-                <p className="text-primary-text my-3 lg:w-1/2">
+                <p className="text-sm lg:text-lg text-primary-text my-3 lg:w-1/2">
                   Your donation can make a huge impact. Help families in need by
                   donating coats, gloves, scarves, and other warm clothing.
                   Every piece counts!
@@ -107,7 +114,7 @@ function Banner() {
                   Donate Now
                 </Link>
               </div>
-              <div className="w-4/5">
+              <div className="w-4/5 ">
                 <img src={donate3} alt="Join Winter Clothing Drive" className="rounded-2xl h-[350px]"/>
               </div>
             </div>

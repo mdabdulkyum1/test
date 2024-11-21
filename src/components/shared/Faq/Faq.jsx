@@ -1,7 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init({});
-AOS.refresh();
 
 
 import faq from '../../../assets/faq.jpg'
@@ -62,8 +58,7 @@ function Faq() {
         </div>
 
       
-        <div className="w-full lg:w-1/2" data-aos="fade-left" data-aos-easing="linear"
-     data-aos-duration="1500">
+        <div className="w-full lg:w-1/2" >
           <img src={faq} alt="Faq" className="w-full h-auto rounded-md" />
         </div>
       </div>
